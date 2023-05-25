@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container_alert_jab{
+    font-family: 'inter', sans-serif;
+    position: fixed;
+    z-index: 128;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: none;
+}
+
+.toast_jab .content{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.toast_jab .closeAlertBtn{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.left .left__color{
+    width: 6px;
+    height: 64px;
+}
+
+.toast_jab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid rgb(224, 224, 224);
+    justify-content: space-between;
+    width: fit-content;
+    align-self: flex-end;
+    margin-left: auto;
+    box-shadow:
+        0.7px 0.7px 2.2px rgba(0, 0, 0, 0.001),
+        1.7px 1.7px 5.3px rgba(0, 0, 0, 0.003),
+        3.3px 3.1px 10px rgba(0, 0, 0, 0.007),
+        5.8px 5.6px 17.9px rgba(0, 0, 0, 0.012),
+        10.9px 10.4px 33.4px rgba(0, 0, 0, 0.023),
+        26px 25px 80px rgba(0, 0, 0, 0.07)
+    ;
+}
+
+.toastLightMode {
+    background-color: white !important;
+}
+
+.toastDarkMode {
+    background-color: rgb(88, 88, 88)!important;
+}
+
+.iconToastLight{
+    color: white !important;
+}
+
+.iconToastDark{
+    color: rgb(88, 88, 88) !important;
+}
+
+.toast_jab i{
+    border-radius: 100%;
+    padding: 0.4rem;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+}
+
+.bg-success{
+    background-color: #68D391 !important;
+}
+
+.bg-info{
+    background-color: #68aad3 !important;
+}
+
+.bg-warning{
+    background-color: #e8a54e !important;
+}
+
+.bg-danger{
+    background-color: #e84e4e !important;
+}
+
+/* .toast_jab .message p{
+    color: rgb(132, 132, 132)
+} */
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes removeAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.reveal{
+    animation: reveal 0.4s ease-in-out;
+}
+
+.hideElement{
+    animation: removeAnimation 3s ease-in-out;
+}
